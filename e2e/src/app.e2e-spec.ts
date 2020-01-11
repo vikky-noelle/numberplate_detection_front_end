@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to tempfrontend!');
+    expect(page.getTitleText()).toEqual('Welcome to numberplate_detection_front_end!');
   });
 
   afterEach(async () => {

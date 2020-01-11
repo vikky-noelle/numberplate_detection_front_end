@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tempfrontend": {
+    "numberplate_detection_front_end": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tempfrontend",
+            "outputPath": "dist/numberplate_detection_front_end",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tempfrontend:build"
+            "browserTarget": "numberplate_detection_front_end:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tempfrontend:build:production"
+              "browserTarget": "numberplate_detection_front_end:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tempfrontend:build"
+            "browserTarget": "numberplate_detection_front_end:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "tempfrontend-e2e": {
+    "numberplate_detection_front_end-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tempfrontend:serve"
+            "devServerTarget": "numberplate_detection_front_end:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tempfrontend:serve:production"
+              "devServerTarget": "numberplate_detection_front_end:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "tempfrontend"
+  "defaultProject": "numberplate_detection_front_end"
 }
