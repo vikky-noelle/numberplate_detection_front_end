@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, ViewChildren } from '@angular/core';
-import { QueryList } from '@angular/core/src/render3';
+import { QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { QueryList } from '@angular/core/src/render3';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  @ViewChild('target_one') target_one;
+  @ViewChild('target_one', { static: true }) target_one;
   @ViewChildren('tiles') tiles: QueryList<any>;
 
 
