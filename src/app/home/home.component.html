@@ -1,15 +1,55 @@
 <div class="bg-one-filter">
   <img class="bg-one" src="assets/images/numberplate-one.jpg" alt="">
 </div>
-<div class="tiles" #tiles>
-  <div style="height: 25px; width: 25px;"></div>
-  <div></div>
-  <div></div>
+
+<div class="bot">
+    <img src="assets/images/bot.png" (click)="openbot()" alt="">
 </div>
-<div class="home-header">
-  <h1>Number Plate Detection</h1>
-  <img (click)="scrollToElement(target_one)" src="assets/images/arrow.png" alt="">
+<div [hidden]="isshowbot" class="bot-body">
+  <h1>FAQ</h1>
+  <h2>What is this website for ?</h2>
+  <p>This is for queries.</p>
 </div>
-<div class="about" #target_one>
-  <h1>Write About Or Description</h1>
+
+<div class="tiles">
+  <div #tiles style="height: 25px; width: 25px;"></div>
+  <div #tiles></div>
+  <div #tiles></div>
+</div>
+
+<div class="base-body">
+  
+  <div class="home-header">
+    <h1>Number Plate Detection</h1>
+    <img (click)="scrollToElement(target_one)" src="assets/images/arrow.png" alt="">
+  </div>
+
+  <div style="margin-top: 150px; height: 20px;" href=""#target_one>taget div for scroll</div>
+  
+  <div class="about">
+    <h1>Gather Info On A Vehicle</h1>
+    <p><i>We will search our database and give you the best results.</i></p>
+    <input type="text" name="" id="" placeholder="Enter The Vehicle Number.">
+    <button>Go</button>
+    <h2 style="padding: 20px;">O R</h2>
+    <input type="text">
+    <button style="margin-left: -124px;">Upload An Image</button>
+  </div>
+
+</div>
+
+<!-- footer -->
+<div class="container">
+  <section>
+    <section class="left">
+      <h1>A</h1>
+      <h1>B</h1>
+      <h1>O</h1>
+      <h1>U</h1>
+      <h1>T</h1>
+    </section>
+    <section class="right">
+      <h1>We are a group of prgrammers making the hard, easy!<br>UI designed by Vikrant Attri aka Laxy.</h1>
+    </section>
+  </section>
 </div>
