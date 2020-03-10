@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef, ViewChildren } from '@angular/core';
 import { QueryList } from '@angular/core';
 
@@ -8,12 +9,17 @@ import { QueryList } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient 
+  ) { }
   @ViewChildren('tiles') tiles: QueryList<any>;
 
   isshowbot=false;
 
   ngOnInit() {
+    this.http.get('http://127.0.0.1:8000/vehicle/?format=json').subscribe(res=>{
+      console.log(res);
+    });
     window.addEventListener('scroll', this.scroll, true);
     this.openbot();
   }
