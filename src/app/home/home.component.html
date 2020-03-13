@@ -1,3 +1,7 @@
+<agm-map [latitude]="lat" [longitude]="lng"> 
+  <agm-marker [latitude]="lat" [longitude]="lng">
+   </agm-marker> 
+</agm-map>
 <div class="bg-one-filter">
   <img class="bg-one" src="assets/images/numberplate-one.jpg" alt="">
 </div>
@@ -32,8 +36,9 @@
     <input type="text" name="" id="" placeholder="Enter The Vehicle Number.">
     <button>Go</button>
     <h2 style="padding: 20px;">O R</h2>
-    <input type="text">
-    <button style="margin-left: -124px;">Upload An Image</button>
+    <img style="height: 200px; width: 200px;background-color: white;" [src]="imageurl" alt="number plate">
+    <input style="cursor: pointer;margin-top: 150px;width: 60%; padding: 0%;" #Image (change)="changepic($event.target.files)" type="file" accept="image/*">
+    <button style="margin-left: -104px; border: 1px solid white;" [disabled]="Image.value==''" (click)="onSubmit()">Submit</button>
   </div>
 
 </div>
